@@ -388,7 +388,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   border: 1px solid #eee;
   margin-bottom: 20px;
   overflow: hidden;
-  display: none;
+  /* display: none; */
 }
 
 .d3gtc-barchart.active,
@@ -410,12 +410,29 @@ body{
 
 .wrapper-controller {
   margin: 0 auto;
-  width: 800px;
+  width: 1200px;
   margin-bottom: 28px;
 }
 
 .wrapper-controller .interval{
   text-align: center;
+  margin-bottom: 20px;
+}
+
+.wrapper-controller .flex-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.wrapper-controller .flex-wrapper .map {
+  width: 686px;
+}
+
+.wrapper-controller .flex-wrapper .column {
+  width: 500px;
+}
+.wrapper-controller .flex-wrapper .donut {
+  width: 328px;
 }
 
 .h1 {
@@ -464,4 +481,13 @@ body{
 
 .d3gtd-tooltip__name span{
   font-weight: 700;
+}
+
+.d3gtc-geomapLegend {
+  background-color: rgba(255,255,255,0.8);
+  border: 1px solid #eee;
+  border-radius: 5px;
+  bottom: 80px;
+  left: 10px;
+  padding: 8px 10px;
 }
