@@ -9,17 +9,39 @@
 <head>
   <title>DSC 530 Project</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"
+   integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+   crossorigin=""/>
 
    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.9.1/d3.js"></script>   
    <script src="https://unpkg.com/topojson-client@3"></script>
    <script src="https://d3js.org/d3-array.v2.min.js"></script>
    <script src="https://unpkg.com/d3-simple-slider"></script>
+   <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"
+   integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
+   crossorigin=""></script>
 </head>
 <body>
-  <script src="d3gtd.js"> </script>
-  <div id="map" style="width:50%"></div>
+  <script src="./dist/d3gtd.js"> </script>
+  <div class="wrapper-controller">
+    <h1 class="h1">Analyzing trends in Global Terrorism Data</h1>
+    <div id="mapWrapper"></div>
+    <div class="interval">
+      Selected period: from <span id="d3gtc-slider-event-start"></span> to <span id="d3gtc-slider-event-end"></span>
+    </div>
+  </div>
+  <div class="wrapper">
+    <div id="visualisations1" class="vis"></div>
+    <div id="visualisations2" class="vis"></div>
+  </div>
   <script>
-    var d3gtd = new D3gtd('map');
+    var d3gtd = new D3gtd({
+      mapId: 'mapWrapper',
+      column1Id: 'visualisations1',
+      column2Id: 'visualisations2',
+      startDateTextId: 'd3gtc-slider-event-start',
+      endDateTextId: 'd3gtc-slider-event-end'
+    });
   </script>
 </body>
 </html>
