@@ -403,6 +403,65 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   font-weight: 700;
   margin-bottom: 10px;
 }
+
 body{
   font-family: 'Arial';
+}
+
+.wrapper-controller {
+  margin: 0 auto;
+  width: 800px;
+  margin-bottom: 28px;
+}
+
+.wrapper-controller .interval{
+  text-align: center;
+}
+
+.h1 {
+  text-align: center;
+}
+
+.d3gtc-geomap {
+  margin-bottom: 20px;
+}
+
+.d3gtc-slider {
+  margin-bottom: 20px;
+}
+
+.interval span {
+  font-weight: 700;
+}
+
+.wrapper {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  width: 1200px;
+}
+
+.wrapper .vis {
+  margin-right: 10px;
+  margin-left: 10px;
+  /* border: 1px solid #eee; */
+  flex-grow: 1;
+  flex-shrink: 0;
+  width: 580px;
+  flex-basis: 580px;
+  /* background: #e9eebe; */
+}
+
+.wrapper .vis .d3gtc-charts-desc {
+  background: #e9eebe;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.wrapper .vis .active {
+  /* border: 1px solid #777; */
+}
+
+.d3gtd-tooltip__name span{
+  font-weight: 700;
 }
