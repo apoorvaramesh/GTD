@@ -22,23 +22,35 @@
    crossorigin=""></script>
 </head>
 <body>
-  <script src="./dist/d3gtd.js"> </script>
+  <script src="d3gtd.js"> </script>
   <div class="wrapper-controller">
     <h1 class="h1">Analyzing trends in Global Terrorism Data</h1>
-    <div id="mapWrapper"></div>
-    <div class="interval">
-      Selected period: from <span id="d3gtc-slider-event-start"></span> to <span id="d3gtc-slider-event-end"></span>
+    <div class="flex-wrapper">
+      <div class="map">
+        <div id="mapWrapper"></div>
+        <div class="interval">
+          Selected period: from <span id="d3gtc-slider-event-start"></span> to <span id="d3gtc-slider-event-end"></span>
+        </div>
+        <div class="flex-wrapper">
+          <div id="donut1" class="donut">
+
+          </div>
+          <div id="donut2" class="donut">
+
+          </div>
+        </div>
+      </div>
+      <div class="column">
+        <div id="visualisations" class="vis"></div>
+      </div>
     </div>
-  </div>
-  <div class="wrapper">
-    <div id="visualisations1" class="vis"></div>
-    <div id="visualisations2" class="vis"></div>
   </div>
   <script>
     var d3gtd = new D3gtd({
       mapId: 'mapWrapper',
-      column1Id: 'visualisations1',
-      column2Id: 'visualisations2',
+      column: 'visualisations',
+      donut1: 'donut1',
+      donut2: 'donut2',
       startDateTextId: 'd3gtc-slider-event-start',
       endDateTextId: 'd3gtc-slider-event-end'
     });
