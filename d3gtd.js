@@ -122,8 +122,7 @@ var D3gtd = function () {
 		this.options = options;
 		this.geomap = new _d3gtd_geomap.D3gtd_map(options);
 
-        //Promise.all([d3.json('./world.json'), d3.json('./countryCodeMapping.json'), d3.csv('./gtdata_filter.csv')]).then(function (_ref) {
-        Promise.all([d3.json('https://raw.githubusercontent.com/apoorvaramesh/GTD/master/world.json'), d3.json('https://raw.githubusercontent.com/apoorvaramesh/GTD/master/countryCodeMapping.json'), d3.csv('https://raw.githubusercontent.com/apoorvaramesh/GTD/master/gtdata_filter.csv')]).then(function (_ref) {
+        Promise.all([d3.json('./world.json'), d3.json('./countryCodeMapping.json'), d3.csv('./gtdata_filter.csv')]).then(function (_ref) {
 			var _ref2 = _slicedToArray(_ref, 3),
 			    world = _ref2[0],
 			    countriesMapping = _ref2[1],
