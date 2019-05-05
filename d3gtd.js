@@ -1,4 +1,13 @@
- (function(modules) { // webpackBootstrap
+/**********************************************************
+ * Extra References:
+ * 
+ * 1. https://codedump.io/share/tCYCakzpfwKz/1/nousslider
+ * 2. https://codedump.io/share/tCYCakzpfwKz/1/raw
+ * 
+ * *********************************************************/
+
+
+(function(modules) { // webpackBootstrap
  	// The module cache
  	var installedModules = {};
 
@@ -113,7 +122,8 @@ var D3gtd = function () {
 		this.options = options;
 		this.geomap = new _d3gtd_geomap.D3gtd_map(options);
 
-		Promise.all([d3.json('./world.json'), d3.json('./countryCodeMapping.json'), d3.csv('./gtdata_filter.csv')]).then(function (_ref) {
+        //Promise.all([d3.json('./world.json'), d3.json('./countryCodeMapping.json'), d3.csv('./gtdata_filter.csv')]).then(function (_ref) {
+        Promise.all([d3.json('https://raw.githubusercontent.com/apoorvaramesh/GTD/master/world.json'), d3.json('https://raw.githubusercontent.com/apoorvaramesh/GTD/master/countryCodeMapping.json'), d3.csv('https://raw.githubusercontent.com/apoorvaramesh/GTD/master/gtdata_filter.csv')]).then(function (_ref) {
 			var _ref2 = _slicedToArray(_ref, 3),
 			    world = _ref2[0],
 			    countriesMapping = _ref2[1],
@@ -637,7 +647,6 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
     }
 
     // https://github.com/WICG/EventListenerOptions/blob/gh-pages/explainer.md
-    // Issue #785
     function getSupportsPassive() {
         var supportsPassive = false;
 
@@ -1092,7 +1101,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
             throw new Error("noUiSlider (" + VERSION + "): 'margin' option must be numeric.");
         }
 
-        // Issue #582
+        // To fix issue
         if (entry === 0) {
             return;
         }
@@ -2730,7 +2739,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
                 decrement = null;
             }
 
-            // As per #391, the comparison for the decrement step can have some rounding issues.
+            // The comparison for the decrement step can have some rounding issues.
             var stepDecimals = scope_Spectrum.countStepDecimals();
 
             // Round per #391
@@ -2843,12 +2852,12 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
             __moveHandles: function __moveHandles(a, b, c) {
                 moveHandles(a, b, scope_Locations, c);
             },
-            options: originalOptions, // Issue #600, #678
+            options: originalOptions,
             updateOptions: updateOptions,
-            target: scope_Target, // Issue #597
+            target: scope_Target,
             removePips: removePips,
             removeTooltips: removeTooltips,
-            pips: pips // Issue #594
+            pips: pips
         };
 
         return scope_Self;
@@ -2977,7 +2986,6 @@ var D3gtd_visblock = exports.D3gtd_visblock = function () {
         country: d,
         data: patchedUpChartsData
       };
-      // this.container.select('.d3gtc-charts-desc').text('Selected country: ' + d.properties.name);
       this.container.select('.d3gtc-barchart').classed('active', true);
       this.container.select('.d3gtc-linechart').classed('active', true);
       this.donutContainer1.classed('active', true);
