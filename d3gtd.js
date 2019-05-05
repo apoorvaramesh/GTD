@@ -2933,17 +2933,17 @@ var D3gtd_visblock = exports.D3gtd_visblock = function () {
     this.container.select('.d3gtc-charts').append('div').classed('d3gtc-barchart', true).append("svg");
 
     this.barchart = this.container.select('.d3gtc-barchart').select('svg');
-    this.barchart.append('text').text('People killed in terrorist attacks pro year').attr('y', '22').attr('x', this.container.node().getBoundingClientRect().width / 2).attr('font-size', '14px').attr('font-weight', '700').attr('text-anchor', 'middle');
+    this.barchart.append('text').text('Number of people killed in terrorist attacks per year').attr('y', '22').attr('x', this.container.node().getBoundingClientRect().width / 2).attr('font-size', '14px').attr('font-weight', '700').attr('text-anchor', 'middle');
     this.barchart.append('text').text('Deaths').attr('y', '30').attr('x', '34').attr('font-size', '10px').attr('font-weight', '700').attr('text-anchor', 'middle');
     this.barchart.append('text').text('Date').attr('y', '257').attr('x', this.container.node().getBoundingClientRect().width - 25).attr('font-size', '10px').attr('font-weight', '700').attr('text-anchor', 'middle');
     this.linechart = this.container.select('.d3gtc-linechart').select('svg');
     this.linechart.append('text').text('Incidents').attr('y', '30').attr('x', '34').attr('font-size', '10px').attr('font-weight', '700').attr('text-anchor', 'middle');
     this.linechart.append('text').text('Date').attr('y', '257').attr('x', this.container.node().getBoundingClientRect().width - 25).attr('font-size', '10px').attr('font-weight', '700').attr('text-anchor', 'middle');
-    this.linechart.append('text').text('Amount of incidents pro year').attr('y', '22').attr('x', this.container.node().getBoundingClientRect().width / 2).attr('font-size', '14px').attr('font-weight', '700').attr('text-anchor', 'middle');
+    this.linechart.append('text').text('Number of terrorist attacks per year').attr('y', '22').attr('x', this.container.node().getBoundingClientRect().width / 2).attr('font-size', '14px').attr('font-weight', '700').attr('text-anchor', 'middle');
     this.donutAttack = this.donutContainer1.select('svg');
-    this.donutAttack.append('text').text('Types of attack').attr('y', '22').attr('x', this.donutContainer1.node().getBoundingClientRect().width / 2).attr('font-size', '14px').attr('font-weight', '700').attr('text-anchor', 'middle');
+    this.donutAttack.append('text').text('10 most common types of attack').attr('y', '22').attr('x', this.donutContainer1.node().getBoundingClientRect().width / 2).attr('font-size', '14px').attr('font-weight', '700').attr('text-anchor', 'middle');
     this.donutTarget = this.donutContainer2.select('svg');
-    this.donutTarget.append('text').text('Types of targets').attr('y', '22').attr('x', this.donutContainer2.node().getBoundingClientRect().width / 2).attr('font-size', '14px').attr('font-weight', '700').attr('text-anchor', 'middle');
+    this.donutTarget.append('text').text('10 most common types of targets').attr('y', '22').attr('x', this.donutContainer2.node().getBoundingClientRect().width / 2).attr('font-size', '14px').attr('font-weight', '700').attr('text-anchor', 'middle');
     this.currentIndex = 0;
     this.data = [];
     this.countries = [];
