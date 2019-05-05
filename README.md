@@ -1,6 +1,6 @@
 # GTD
 
-Libraries used are from package.json:
+Libraries used are from package.json (npm):
 
 "devDependencies": {
 "babel-core": "^6.26.3",
